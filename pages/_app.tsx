@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import StudentContextProvider from "../context/student";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <StudentContextProvider>
+      <Component {...pageProps} />
+    </StudentContextProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
