@@ -11,7 +11,7 @@ const StudentList = () => {
     <div>
       <div className="grid gap-4 grid-cols-4">
         {students.map((student) => (
-          <div className="border">
+          <div key={student.grade} className="border">
             <p>
               {student.firstName} {student.lastName}
             </p>
